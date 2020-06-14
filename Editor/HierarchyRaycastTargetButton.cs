@@ -82,6 +82,10 @@ namespace Kogane.Internal
 			{
 				Undo.RecordObject( graphic, "Inspector" );
 				graphic.raycastTarget = !raycastTarget;
+
+				// UniSceneViewRaycastTargetVisualizer の描画を更新するためには
+				// EditorUtility.SetDirty を呼び出す必要がある
+				EditorUtility.SetDirty( graphic );
 			}
 
 			GUI.color = oldColor;
