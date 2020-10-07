@@ -45,7 +45,7 @@ namespace Kogane.Internal
 		[SettingsProvider]
 		private static SettingsProvider Create()
 		{
-			var path     = "Preferences/UniHierarchyRaycastTargetButton";
+			var path     = "Kogane/UniHierarchyRaycastTargetButton";
 			var provider = new HierarchyRaycastTargetButtonSettingsProvider( path, SettingsScope.User );
 
 			return provider;
